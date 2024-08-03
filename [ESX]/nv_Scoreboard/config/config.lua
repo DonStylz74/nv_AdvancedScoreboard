@@ -1,6 +1,6 @@
 Config = {}
 
-Config.ESX_Event = 'esx:getSharedObject'
+Config.ESX_Event = 'exports["es_extended"]:getSharedObject()'
 
 Config.Locale = 'en'
 
