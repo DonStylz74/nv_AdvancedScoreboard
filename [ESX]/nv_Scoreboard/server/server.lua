@@ -1,12 +1,15 @@
 local srv_limit = GetConvarInt('sv_maxclients', 32)
 
-ESX = nil
+--ESX = nil
+ESX = exports["es_extended"]:getSharedObject()
+
 
 Citizen.CreateThread(function()
-    while ESX == nil do
-        TriggerEvent(Config.ESX_Event, function(obj) ESX = obj end)
-        Citizen.Wait(250)
-    end
+    --while ESX == nil do
+        --TriggerEvent(Config.ESX_Event, function(obj) ESX = obj end)
+        ESX = exports["es_extended"]:getSharedObject()
+		--Citizen.Wait(250)
+    --end
 end)
 
 local PLAYERS = {}
